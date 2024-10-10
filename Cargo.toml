@@ -32,14 +32,15 @@ exclude = [
   "benches"
 ]
 
-[features]
-default = ["std"]
-std = []
-
 [dependencies]
 bytes = "1"
 fnv = "1.0.5"
 itoa = "1"
+
+[features]
+default = ["std"]
+std = []
+no_std = ["bytes/", "fnv/"]
 
 [dev-dependencies]
 quickcheck = "1"
